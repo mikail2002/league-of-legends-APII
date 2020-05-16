@@ -126,12 +126,19 @@ body {
   p{
     margin: 0;
     position: relative;
-    top: 20%;
+    top: 22%;
     left: 53%;
     color: white;
     font-size: 25px;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+  }
+  h3{
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    left: 47.8%;
+    top: 38.5%;
   }
 }
 
@@ -231,3 +238,11 @@ footer{
 q {font-style: italic;}
 
 .author {color: white;}
+
+.profileicon{
+  width: 150px;
+  height: 150px;
+  left: 39%;
+  top: 0.5%;
+  position: absolute;
+}

@@ -22,7 +22,7 @@ $rankedObj->setRankedProperties();
 
 echo '<div class="get1">';
 echo '	<p>  Type:   ' .$rankedObj->queueType()  .  '</p>';
-echo '	<p>	 Rank:	' .$rankedObj->tier()	.'' .$rankedObj->rank()	.'</p>		';
+echo '	<p>	 Rank:	' .$rankedObj->tier()	.''  .$rankedObj->rank()	.'</p>		';
 echo '	<p>	  Name:	' .$rankedObj->summonerName()	.'</p>	';
 echo '	<p>	  Wins:	' .$rankedObj->wins()	.'</p>	';
 echo '	<p>	  Losses:	' .$rankedObj->losses()	.'</p>	';

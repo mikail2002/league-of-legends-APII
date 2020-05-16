@@ -1,5 +1,5 @@
 <?php
-include('JsonConversie.class.php');
+include('JsonConversie2.class.php');
 
 class Ranked
 {

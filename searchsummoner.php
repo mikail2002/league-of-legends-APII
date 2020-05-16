@@ -25,7 +25,15 @@ $summonerObj = new Summoner($newName);
 
 $summonerObj->setSummonerProperties();
 
+$profileIconId = $summonerObj->profileIconId();
 echo '<div class="get1">';
+if ($profileIconId==3797){
+    echo '<img class="profileicon" src="img/3797.png">';
+}
+elseif ($profileIconId==3478){
+    echo '<img class="profileicon" src="img/3478.png">';
+}
+echo '	<h3>' .$summonerObj->summonerLevel()	.'</h3>	';
 echo '	<p>  Name:   ' .$summonerObj->Name()  .  '</p>';
 echo '	<p>	 ProfileIcon:	' .$summonerObj->profileIconId()	.'</p>		';
 echo '	<p>	  Level:	' .$summonerObj->summonerLevel()	.'</p>	';
@@ -41,6 +49,7 @@ echo '	<p>	  id:	' .$summonerObj->id()	.'</p>	';
 </form>
 
 </div>
+
 
 <a href='index.php' class='echo12'><p> Terug naar het hoofdpagina </p></a>;
 

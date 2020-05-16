@@ -34,7 +34,7 @@ class JsonConversie
 
     function getInfo($whichInfo)
     {
-        return $this->data[$whichInfo];
+        return $this->data[0][$whichInfo];
     }
 }
 ?>
