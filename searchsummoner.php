@@ -1,62 +1,75 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoL API</title>
-    <link rel="stylesheet" type="text/css" href="scss/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>LoL Api</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
-<h1 class="logo">Mikail Köker</h1>
-<?php
+    <?php
+        include('assets/classes/Summoner.class.php');
+        include('assets/classes/SummonerHelper.class.php');
+        include('assets/classes/Ranked.class.php');
 
-
-include('classes/Summoner.class.php');
-include('classes/SummonerHelper.class.php');
-
-$postName = $_POST['name'];
-
-
-$newName = SummonerHelper::ReplaceTitle($postName);
-
-
-$summonerObj = new Summoner($newName);
-
-
-$summonerObj->setSummonerProperties();
-
-$profileIconId = $summonerObj->profileIconId();
-echo '<div class="get1">';
-if ($profileIconId==3797){
-    echo '<img class="profileicon" src="img/3797.png">';
-}
-elseif ($profileIconId==3478){
-    echo '<img class="profileicon" src="img/3478.png">';
-}
-echo '	<h3>' .$summonerObj->summonerLevel()	.'</h3>	';
-echo '	<p>  Name:   ' .$summonerObj->Name()  .  '</p>';
-echo '	<p>	 ProfileIcon:	' .$summonerObj->profileIconId()	.'</p>		';
-echo '	<p>	  Level:	' .$summonerObj->summonerLevel()	.'</p>	';
-echo '	<p>	  id:	' .$summonerObj->id()	.'</p>	';
-
-
-?>
-<h2 class="echo1"><ion-icon name="arrow-down-outline"></ion-icon>
-    Put your ID down here<ion-icon name="arrow-down-outline"></ion-icon></h2>
-<form action="rankedstats.php" method="post">
-    <input required type="text" title="summonerId" name="summonerId" class="searchbar2" placeholder="Ranked Stats" />
-    <input type="image" src="img/search.png" class="submit2" name="submit" alt="submit" width="42px" height="42px">
-</form>
-
-</div>
-
-
-<a href='index.php' class='echo12'><p> Terug naar het hoofdpagina </p></a>;
-
-
-<footer>&copy; Copyright 2020, Mikail Köker</footer>
-
-<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+        $postName = $_POST['name'];
+        $newName = SummonerHelper::ReplaceTitle($postName);
+        $summonerObj = new Summoner($newName);
+        $summonerObj->setSummonerProperties();
+        $postId = $summonerObj->id();
+        $rankedObj2 = new Ranked($postId);
+        $rankedObj2->setRankedProperties();
+    ?>
+    <section class="menu summoner">
+        <div id="promo1">
+            <div class="jumbotron">
+                <h1>Summoner info/stats</h1>
+                <div class="row no-gutters stats-grid">
+                    <div class="col-md-6">
+                        <div class="stat-small">
+                            <h3>Name:</h3>
+                            <h4><?php echo $summonerObj->Name(); ?></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-small">
+                            <h3>Level &amp; Lp:</h3>
+                            <h4>Lvl. <?php echo $summonerObj->summonerLevel()?> - <?php echo $rankedObj2->leaguePoints(); ?> LP</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-small">
+                            <h3>QueueType:</h3>
+                            <h4><?php echo $rankedObj2->queueType(); ?></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-small">
+                            <h3>Rank:</h3>
+                            <h4><?php echo $rankedObj2->tier()?> <?php echo $rankedObj2->rank(); ?></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-small">
+                            <h3>Wins:</h3>
+                            <h4><?php echo $rankedObj2->wins(); ?></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-small">
+                            <h3>Losses:</h3>
+                            <h4><?php echo $rankedObj2->losses(); ?></h4>
+                        </div>
+                    </div>
+                </div><a class="goback" href="index.php" style="margin-top: 0;">Go back</a></div>
+        </div>
+    </section>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
-</html>
 
+</html>

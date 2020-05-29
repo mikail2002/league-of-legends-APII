@@ -1,0 +1,100 @@
+body {
+  padding-top: 45px;
+}
+
+.menu {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.menu p {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.menu h1 {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.menu h2 {
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.menu .search {
+  font-size: 19px;
+  margin-bottom: 80px;
+}
+
+.menu .search .searchbar {
+  margin-right: 5px;
+}
+
+#promo {
+  text-align: center;
+  padding: 40px;
+}
+
+#promo {
+  padding: 20px;
+}
+
+#promo .jumbotron {
+  padding: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#search12 {
+  margin-left: 5px;
+}
+
+@media (min-width: 992px) {
+  #promo .jumbotron {
+    padding: 20px;
+  }
+}
+
+.formdiv {
+  display: inline-block;
+}
+
+#promo1 {
+  padding: 40px;
+}
+
+@media (min-width: 576px) {
+  #promo1 {
+    padding: 20px;
+  }
+}
+
+#promo1 .jumbotron {
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+@media (min-width: 992px) {
+  #promo1 .jumbotron {
+    padding: 20px;
+  }
+}
+
+.stat-small {
+  height: 150px;
+  padding-top: 43px;
+  margin: 0 0 10px 10px;
+  text-align: center;
+}
+
+.stat-small h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.stats-grid {
+  padding-right: 10px;
+}
+

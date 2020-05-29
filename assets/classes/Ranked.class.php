@@ -63,7 +63,7 @@ class Ranked
     public function setRankedProperties()
     {
 
-        $jsonconversie = new JsonConversie($this->summonerId);
+        $jsonconversie = new JsonConversie2($this->summonerId);
         $jsonconversie->setAPIUrl("https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/");
 
         $jsonconversie->Conversie();

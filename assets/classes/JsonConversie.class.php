@@ -3,7 +3,7 @@
 class JsonConversie
 {
     public $url = "";
-    private $api = "?api_key=RGAPI-6d0445c5-02b6-440d-9584-4b8fd2f26ace";
+    private $api = "?api_key=RGAPI-a9b9c5fb-c1b3-42d9-a5cc-73e313ba4192";
     private $input = "";
     private $data = "";
 
@@ -34,7 +34,7 @@ class JsonConversie
 
     function getInfo($whichInfo)
     {
-        return $this->data[0][$whichInfo];
+        return $this->data[$whichInfo];
     }
 }
 ?>

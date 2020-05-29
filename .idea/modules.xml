@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/league of legends APII.iml" filepath="$PROJECT_DIR$/.idea/league of legends APII.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LoL.iml" filepath="$PROJECT_DIR$/.idea/LoL.iml" />
     </modules>
   </component>
 </project>
