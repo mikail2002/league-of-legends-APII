@@ -76,7 +76,7 @@ body ::placeholder {
 }
 
 .submit {
-  margin: -65px 500px 0 620px;
+  margin: -65px 500px 0 720px;
   top: 50%;
   left: 0;
   right: 0;
@@ -155,8 +155,8 @@ footer {
   background: #a48fd2;
   opacity: 0.9;
   width: 750px;
-  left: 28%;
-  margin-top: 400px;
+  left: 30.5%;
+  margin-top: 470px;
 }
 
 .h211 {
@@ -204,7 +204,7 @@ footer {
   padding: 20px;
   background: rebeccapurple;
   width: 710px;
-  left: 28%;
+  left: 30.5%;
 }
 
 .dot {
