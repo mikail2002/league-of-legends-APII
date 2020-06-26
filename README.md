@@ -3,6 +3,6 @@ Zelf ontwikkeling op het gebied van API. Het gebruik van GitHub &amp; versie beh
 
 # Screenshots
 
-<img src="img/Homepage.jpg">
-<img src="img/profile.jpg">
-<img src="img/stats.jpg">
+<img src="img/Homepage.png">
+<img src="img/profile.png">
+<img src="img/stats.png">
