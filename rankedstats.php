@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="scss/main.css">
 </head>
 <body>
-<h1 class="logo">Mikail Köker</h1>
+<h1 class="logo">Mikail Köker <br>
+    Anil Sen</h1>
 <?php
 
 

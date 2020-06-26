@@ -8,7 +8,8 @@
 </head>
 <body>
 
-    <h1 class="logo">Mikail Köker</h1>
+    <h1 class="logo">Mikail Köker <br>
+                        Anil Sen</h1>
 
     <form action="searchsummoner.php" method="post">
       <input required type="text" title="name" name="name" class="searchbar" placeholder="Search Summoner" />
